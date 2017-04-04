@@ -23,8 +23,8 @@ public class SimpleServlet extends HttpServlet {
         response.setContentType("text/html");
         response.getWriter().print("Hello test World!");
         
-        VisualRecognition service = new VisualRecognition(VisualRecognition.VERSION_DATE_2016_05_19);
-		service.setAPIKey("{be542628436545954bf7f34c3669ccf89e218bb0}");
+        VisualRecognition service = new VisualRecognition(VisualRecognition.VERSION_DATE_2016_05_20);
+		service.setAPIKey("be542628436545954bf7f34c3669ccf89e218bb0");
 		System.out.println("Classify an image");
 		ClassifyImagesOptions options = new ClassifyImagesOptions.Builder().images(new File("image/1081.jpg")).build();
 		VisualClassification result = service.classify(options).execute();
